@@ -2,9 +2,9 @@
 int main()
 {
 	int i;
-	char s[]="Balbu Loves Betli";
+	char s[]="Hello world";
 	FILE *bb;
-	bb=fopen("Babu.txt","w");
+	bb=fopen("world.txt","w");
 	for(i=0;i<strlen(s);i++)
 	{
 		fputc(s[i],bb);
