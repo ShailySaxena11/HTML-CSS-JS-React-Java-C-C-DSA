@@ -6,7 +6,7 @@ int main()
 	puts("Enter the String");
 	gets(s);
 	FILE *bb;
-	bb=fopen("Belti.txt","w");
+	bb=fopen("programming.txt","w");
 	for(i=0;i<strlen(s);i++)
 	{
 		fputc(s[i],bb);
