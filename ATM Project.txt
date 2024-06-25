@@ -1,0 +1,293 @@
+#include<stdio.h>
+void main()
+{
+	printf("Namaste Aapka Axis Bank ATM Me Sawagat He \n\n");
+	int l;
+	printf("Enter Your Language !!!\n\n");
+	printf("Press 1 for English \n");
+	printf("Hindi Ke Liye 2 Darj Karein \n\n");
+	scanf("%d",&l);
+	int p,n,np1,np2,d,s;
+	float a=15000.00;
+	char id,p1,p2;
+	if(l==1)
+	{
+		printf("You Entered English Language !!! \n\n");
+		printf("Please Enter Your PIN \n\n");
+		scanf("%d",&p);
+		if(p==6309)
+		{
+			printf("Welcome!!! \n\n");
+			printf("Press 1 For Account Details \n");
+			printf("Press 2 For Balance enquiry \n");
+			printf("Press 3 For Debit Amount \n");
+			printf("Press 4 For Credit Amount \n");
+			printf("Press 5 For Internet Banking \n");
+			printf("Press 6 For PIN Change \n\n");
+			scanf("%d",&n);
+			switch(n)
+			{
+				case 1:
+					{
+						printf("Name: Yash Nagar \n");
+						printf("Address: Indore \n");
+						printf("Age: XX \n");
+						printf("Mob No.: 9123456780 \n");
+						printf("Email ID: xyz123@gmail.com \n");
+						break;
+					}
+				case 2:
+					{
+						printf("Your Balance Is Rs. %.2f INR \n",a);
+						break;
+					}
+				case 3:
+					{
+						printf("Enter Your Debit Amount \n\n");
+						scanf("%d",&d);
+						a=a-d;
+						printf("Your Avaliable Balance is : %.2f INR ",a);
+						break;	
+					}
+				case 4:
+					{
+						printf("Enter Your Credit Amount \n\n");
+						scanf("%d",&d);
+						a=a+d;
+						printf("Your Avaliable Balance is : %.2f INR ",a);
+						break;	
+					}
+				case 5:
+					{
+						printf("Press 1 for SIGNUP \n ");
+						printf("Press 2 for SIGNIN \n\n");
+						scanf("%d",&s);
+						if(s==1)
+						{
+							printf("Enter Your ID : ");
+							scanf("%s",&id);
+							printf("Set Your Password : ");	
+							scanf("%s",&p1);
+							printf("Re-entered Password : ");
+							scanf("%s",&p2);
+							if(p1==p2)
+							{
+								if(p1!=id)
+								{
+									printf("Successfully SIGNUP ");
+								}
+								else
+								{
+									printf("ID And Password Can't Be Same ");
+								}
+							}
+							else
+							{
+								printf("Password Mismatch ");
+							}
+						}
+						else if(s==2)
+						{
+							printf("Enter Your LOGIN ID : ");
+							scanf("%s",&id);
+							printf("Enter Your LOGIN Password : ");
+							scanf("%s",&p1);
+							if(id=="Yash Nagar")
+							{
+								if(p1=="Yash@123")
+								{
+									printf("Successfully LOGIN ");
+								}
+								else
+								{
+									printf("Password Incorrect ");
+								}
+							}
+							else
+							{
+								printf("Enter Correct ID ");
+							}
+						}
+						else
+						{
+							printf("Please Enter Valid Input ");
+						}
+						break;
+					}
+				case 6:
+					{
+						printf("Enter Your Old PIN : \n");
+						scanf("%d",&p);
+						if(p==6309)
+						{
+							printf("Enter Your New PIN : ");
+							scanf("%d",&np1);
+							printf("Re-Entered New PIN : ");
+							scanf("%d",&np2);
+							if(np1==np2 && np2!=p)
+							{
+								p=np1;
+								printf("PIN Change Successfully");
+							}
+							else
+							{
+								printf("PIN Mismatch");
+							}
+						}
+						else
+						{
+							printf("Old PIN Mismatch ");
+						}
+						break;
+					}		
+			}
+		}
+		else
+		{
+			printf("Invalid PIN \n\n");
+			printf("Please Enter Correct PIN \n");
+		}
+	}
+	else if(l==2)
+	{
+		printf("Aapne Hindi Bhasha Chuni He !!! \n\n");
+		printf("Apna PIN Darj Karein \n\n");
+		scanf("%d",&p);
+		if(p==6309)
+		{
+			printf("Aapka Sawagat Hai \n\n");
+			printf("Khate Ki Jankari Ke Liye 1 Darj Karein \n");
+			printf("Apni Maujuda Rashi Janne Ke Liye 2 Darj Karein \n");
+			printf("Nagad Rashi Nikalne Ke Liye 3 Darj Karein \n");
+			printf("Nagad Rashi Jama Karne Ke Liye 4 Darj Karein \n");
+			printf("Internet Sambandhit Sevaon Ke Liye 5 Darj Karein \n");
+			printf("Maujuda PIN Badalne Ke Liye 6 Darj Karein \n\n");
+			scanf("%d",&n);
+			switch(n)
+			{
+				case 1:
+					{
+						printf("Naam: Yash Nagar \n");
+						printf("Pata: Indore \n");
+						printf("Aayu: XX \n");
+						printf("Mob No.: 9123456780 \n");
+						printf("Email ID: xyz123@gmail.com \n");
+						break;
+					}
+				case 2:
+					{
+						printf("Aapki Maujuda Rashi He Rs. %.2f INR \n",a);
+						break;
+					}
+				case 3:
+					{
+						printf("Nagadi Nikalne Hetu Rashi Darj Karein \n\n");
+						scanf("%d",&d);
+						a=a-d;
+						printf("Aapki Maujuda Rashi He Rs. %.2f INR \n ",a);
+						break;	
+					}
+				case 4:
+					{
+						printf("Nagadi Jama Karne Hetu Rashi Darj Karein \n\n");
+						scanf("%d",&d);
+						a=a+d;
+						printf("Aapki Maujuda Rashi He Rs. %.2f INR \n ",a);
+						break;	
+					}
+				case 5:
+					{
+						printf("SIGNUP Karne Hetu 1 Darj Karein \n ");
+						printf("SIGNIN Karne Hetu 2 Darj Karein \n\n");
+						scanf("%d",&s);
+						if(s==1)
+						{
+							printf("Apna ID Darj Karein: ");
+							scanf("%s",&id);
+							printf("Apna Password Darj Karein : ");	
+							scanf("%s",&p1);
+							printf("Apna Password Punah Darj Karein : ");
+							scanf("%s",&p2);
+							if(p1==p2)
+							{
+								if(p1!=id)
+								{
+									printf("Safaltapurvak SIGNUP Ho Gya He");
+								}
+								else
+								{
+									printf("ID avam Password Saman Darj Na Karein");
+								}
+							}
+							else
+							{
+								printf("Password Asamaan ");
+							}
+						}
+						else if(s==2)
+						{
+							printf("Apna LOGIN ID Darj Karein : ");
+							scanf("%s",&id);
+							printf("Apna LOGIN Password Darj Karein : ");
+							scanf("%s",&p1);
+							if(id=="Yash Nagar")
+							{
+								if(p1=="Yash@123")
+								{
+									printf("Safaltapurvak LOGIN Ho Gya Hai ");
+								}
+								else
+								{
+									printf("Password Asamaan ");
+								}
+							}
+							else
+							{
+								printf("Sahi ID Darj Karein ");
+							}
+						}
+						else
+						{
+							printf("Sahi Ank Darj Karein ");
+						}
+						break;
+					}
+				case 6:
+					{
+						printf("Apna Purana PIN Darj Karein : \n");
+						scanf("%d",&p);
+						if(p==6309)
+						{
+							printf("Apna Naya PIN Darj Karein : ");
+							scanf("%d",&np1);
+							printf("Apna Naya PIN Punah Darj Karein : ");
+							scanf("%d",&np2);
+							if(np1==np2 && np2!=p)
+							{
+								p=np1;
+								printf("PIN Safaltapurvak Badala Gya Hai");
+							}
+							else
+							{
+								printf("PIN Asamaan");
+							}
+						}
+						else
+						{
+							printf("Purana PIN Asamaan Hai ");
+						}
+						break;
+					}		
+			}
+		}
+		else
+		{
+			printf("Aapka PIN Galat Hai \n\n");
+			printf("Krapiya Sahi PIN Darj Karein \n");
+		}
+	}
+	else
+	{
+		printf("Please Enter Valid Input ");
+	}
+}   
